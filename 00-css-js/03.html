@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.box{position:absolute;left:0;right:0;top:0;bottom:0;margin: auto;width:100px;height:100px;background:red;transition:0.5s}
+.box.active{
+	transform:scale(1.5) rotate(45deg) translate(120px, 50px);
+}
+</style>
+<script>
+//window.addEventListener('load',() =>{
+window.addEventListener('DOMContentLoaded',() =>{
+	const box= document.querySelector('.box');
+	function clickBoxHandler() {
+		box.classList.add('active');
+	}
+	
+	box.addEventListener('click',clickBoxHandler);
+	
+});
+
+</script>
+<body>
+<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG</title>
+  <style>
+  .the-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+  }
+  .the-svg text {
+    font-size: 5rem;
+  }
+  </style>
+</head>
+<body>
+  <svg class="the-svg">
+    <defs>
+      <mask id="mask-circle">
+        <circle cx="250" cy="70" r="40"></circle>
+      </mask>
+      <style>
+        #mask-circle circle {
+          fill: #fff;
+        }
+      </style>
+    </defs>
+    <g mask="url(#mask-circle)">
+      <text x="10" y="100">Hello SVG! Hello SVG! Hello SVG! Hello SVG! Hello SVG!</text>
+    </g>
+  </svg>
+</body>
+</html>
